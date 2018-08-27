@@ -14,7 +14,7 @@ def crop_and_resize(im, t_s):
     max_length = np.max(im.shape[0:2])
     min_length = np.min(im.shape[0:2])
     temp_shape = (min_length, min_length)
-    start_pos = int(max_length - min_length / 2)
+    start_pos = int((max_length - min_length) / 2)
     if max_idx == 0:
         im = im[0 : min_length, :, :]
     else:
